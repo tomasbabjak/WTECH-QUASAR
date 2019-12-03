@@ -29,9 +29,9 @@
                     rows="7"
                 />
             </q-field>
-            <!-- <q-field helper="Supported format: JPG, max. file size: 300KiB" class="q-mt-lg">
-                <q-uploader float-label="Images" multiple extensions=".jpg" auto-expand/>
-            </q-field> -->
+            <q-field helper="Supported format: JPG, max. file size: 300KiB" class="q-mt-lg">
+                <q-uploader url="http://127.0.0.1:8000/upload" float-label="Images" multiple extensions=".jpg" :additional-fields="[{name: 'name', value: productName}, {name: 'brand', value: productBrand}]" auto-expand/>
+            </q-field>
         </q-card-main>
         <q-card-actions class="q-mt-md">
             <div class="row justify-end full-width docs-btn">
